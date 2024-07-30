@@ -10,14 +10,14 @@ const Navbar = () => {
     <div className="flex justify-between">
     <div className="flex w-2/6 justify-between">
         <a href="/">
-            <p className="text-white text-xl font-bold">D</p>
+            <p className="text-white text-3xl font-bold">D</p>
         </a>
         <ul className="flex gap-8">
             {navLinks.map((item)=>(
                 <li className="text-xl font-semibold" key={item.label}>
                     <a 
                     href={item.href}
-                    className="text-white hover:text-fuchsia-600"
+                    className="text-white hover-line"
                     >
                         {item.label}
                     </a>
@@ -26,10 +26,16 @@ const Navbar = () => {
         </ul>
         
     </div>
-    <div className="flex items-center text-2xl w-40 justify-between">
-        <FaInstagram />
-        <FaXTwitter />
-        <FaMedium />
+    <div className="flex items-center text-2xl w-40 justify-between ">
+        <a href="/">
+            <FaInstagram className="hover:-translate-y-2 duration-300 ease-in-out cursor-pointer"/>
+        </a>
+        <a href="/">
+            <FaXTwitter className="hover:-translate-y-2 duration-300 ease-in-out cursor-pointer"/>
+        </a>
+        <a href="/">
+            <FaMedium className="hover:-translate-y-2 duration-300 ease-in-out cursor-pointer"/>
+        </a>
 
     </div>
     </div>

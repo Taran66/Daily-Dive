@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+  @apply bg-black text-white ;
+}
+
+@layer components {
+  .max-container{
+    margin: 60px;
+  }
+}

@@ -2,9 +2,6 @@ import { navLinks } from "../constants"
 import { FaInstagram } from "react-icons/fa";
 import { FaXTwitter, FaMedium } from "react-icons/fa6";
 
-
-
-
 const Navbar = () => {
   return (
     <div className="flex justify-between">

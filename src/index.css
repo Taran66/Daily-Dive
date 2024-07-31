@@ -3,13 +3,15 @@
 @tailwind utilities;
 
 body{
-  @apply bg-black text-white ;
+  @apply bg-black text-white;
   @apply font-roboto;
+  
+  /* background-image: url(https://images.unsplash.com/photo-1675981004502-cb3961785a38?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D) */
 }
 
 @layer components {
   .max-container{
-    margin: 60px;
+    margin: 0px 60px;
   }
 }
 

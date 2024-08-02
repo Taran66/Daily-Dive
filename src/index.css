@@ -32,3 +32,65 @@ body{
 .hover-line:hover::after {
   width: 100%;
 }
+.carousel-container {
+  width: 100%;
+   /* Adjust height as needed */
+}
+
+.carousel-track {
+  display: flex;
+  white-space: nowrap;
+  will-change: transform;
+  animation: scroll 10s linear infinite;
+}
+
+.carousel-track:hover {
+  animation-play-state: paused;
+}
+
+.carousel-track img {
+  width: 1/4; /* Adjust width as needed */
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.carousel-track img:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+@layer components {
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%); /* Adjust based on the number of images */
+    }
+  }
+}
+
+.image-container {
+  position: relative;
+  width: 100%; /* Ensure it fits within the carousel */
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  color: white;
+  opacity: 0; /* Start hidden */
+  transition: opacity 0.3s ease; /* Smooth transition */
+}
+
+.image-container:hover .overlay {
+  opacity: 1; /* Show overlay on hover */
+}

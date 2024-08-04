@@ -60,6 +60,13 @@ body{
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
+.vertical-line {
+  width: 2px; /* Adjust the width of the line */
+  height: 70%; /* Adjust the height as needed */
+  background-color: white; /* Change the color of the line */
+  margin: 20px auto; /* Center the line and add vertical spacing */
+}
+
 @layer components {
   @keyframes scroll {
     0% {
@@ -71,26 +78,3 @@ body{
   }
 }
 
-.image-container {
-  position: relative;
-  width: 100%; /* Ensure it fits within the carousel */
-}
-
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-  color: white;
-  opacity: 0; /* Start hidden */
-  transition: opacity 0.3s ease; /* Smooth transition */
-}
-
-.image-container:hover .overlay {
-  opacity: 1; /* Show overlay on hover */
-}

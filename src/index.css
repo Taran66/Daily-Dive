@@ -13,6 +13,10 @@ body{
   .max-container{
     margin: 0px 60px;
   }
+
+  .max-container2 {
+    margin: 0px 150px;
+  }
 }
 
 .hover-line {

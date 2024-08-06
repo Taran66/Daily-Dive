@@ -24,7 +24,7 @@ const ThirdPage = () => {
         </div>
       </div>
       <div>
-        <button className='bg-white text-black px-4 py-4 text-lg font-medium rounded-full'>Explore more</button>
+        
       </div>
     </div>
     </div>

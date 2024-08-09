@@ -5,30 +5,36 @@ import SecondPage from './section/SecondPage';
 import FourthPage from './section/FourthPage';
 import FifthPage from './section/FifthPage';
 import Sixth from './section/Sixth';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import BlogPost from './section/BlogPost';
+import { useEffect, useState } from 'react';
 
-const App = () => 
-  (
+const App = () => {
+  return(
+        
     <main>
-      <section>
-        <LandingPage />
-      </section>
-      <section>
-        <SecondPage />
-      </section>
-      <section>
-        <FourthPage />
-      </section>
-      <section>
-        <ThirdPage />
-      </section>
-      <section>
-        <FifthPage />
-      </section>
-      <section>
-        <Sixth />
-      </section>
-    </main>
+    <section>
+      <LandingPage />
+    </section>
+    <section>
+      <SecondPage />
+    </section>
+    <section>
+      <FourthPage />
+    </section>
+    <section>
+      <ThirdPage />
+    </section>
+    <section>
+      <FifthPage />
+    </section>
+    <section>
+      <Sixth />
+    </section>
+  </main>
   )
+}
 
 
   export default App;

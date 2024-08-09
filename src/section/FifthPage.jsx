@@ -7,7 +7,7 @@ const FifthPage = () => {
 
   useEffect(() => {
     const fetchBlogData = async () => {
-      const API_KEY = 'AIzaSyA_01sR6Ckw8Y37yec-sJbDjAlNb-iNNso'; // Replace with your actual API key
+      const API_KEY = 'AIzaSyA_01sR6Ckw8Y37yec-sJbDjAlNb-iNNso';
       const BLOG_ID = '2399953';
 
       try {
@@ -49,8 +49,8 @@ const FifthPage = () => {
             </li>
           ))}
         </ul>
-
-        <Routes>
+        
+        <Routes >
           <Route path="/blog/:id" element={<BlogPost blogPosts={blogPosts} />} />
         </Routes>
       </div>
@@ -59,3 +59,4 @@ const FifthPage = () => {
 };
 
 export default FifthPage;
+

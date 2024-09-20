@@ -31,8 +31,19 @@ const FifthPage = () => {
   }, []);
 
   return (
-    <Router>
-      <div className="max-container2 flex mt-40">
+    <div className='flex flex-col h-screen gap-10'>
+      <div>
+
+      </div>
+      <div className='flex justify-center '>
+        <h2 className='text-[150px]'>Explore Blogs</h2>
+      </div>
+      <div>
+        
+      </div>
+      <Router>
+      <div className="max-container2 flex gap-5 overflow-hidden">
+        <div className='w-[1000px] overflow-y-scroll scrollbar-thin scrollbar-thumb-gray-900 scrollbar-track-gray-100'>
         <ul className="flex flex-col gap-10">
           {blogPosts.map((item, index) => (
             <li key={index} className="">
@@ -42,19 +53,28 @@ const FifthPage = () => {
                     <p className="text-gray-400 text-lg">{item.date}</p>
                     <h3 className="text-3xl font-bold">{item.heading}</h3>
                     <p dangerouslySetInnerHTML={{ __html: item.content.substring(0, 100) + '...' }}></p>
+                    
                   </div>
                   {item.src && <img src={item.src} alt="blog-image" className="w-72" />}
+
                 </div>
               </Link>
             </li>
           ))}
         </ul>
-        
+        </div>
+        <div className='w-[2000px] overflow-y-scroll scrollbar-thin scrollbar-thumb-gray-900 scrollbar-track-gray-100'>
         <Routes >
-          <Route path="/blog/:id" element={<BlogPost blogPosts={blogPosts} />} />
+          <Route 
+          path="/blog/:id" 
+          element={<BlogPost blogPosts={blogPosts} />} 
+          />
         </Routes>
+        </div>
       </div>
     </Router>
+    </div>
+   
   );
 };
 

@@ -4,7 +4,7 @@ import ThirdPage from './section/ThirdPage';
 import SecondPage from './section/SecondPage';
 import FourthPage from './section/FourthPage';
 import FifthPage from './section/FifthPage';
-import Sixth from './section/Sixth';
+
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import BlogPost from './section/BlogPost';
@@ -23,14 +23,11 @@ const App = () => {
     <section>
       <FourthPage />
     </section>
-    <section>
+    {/* <section>
       <ThirdPage />
-    </section>
+    </section> */}
     <section>
       <FifthPage />
-    </section>
-    <section>
-      <Sixth />
     </section>
   </main>
   )
